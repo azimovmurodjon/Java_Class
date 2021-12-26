@@ -95,6 +95,12 @@ class integerMaxValue{
     }
 }
 
+class bugFix{
+    public static void main(String[] args) {
+        System.out.println("Bug fixing");
+    }
+}
+
 class Numbers{
     public static void main(String[] args) {
         System.out.println(56);     // 56

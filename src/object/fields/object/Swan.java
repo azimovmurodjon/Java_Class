@@ -83,7 +83,9 @@ class Egg{
  * in order, setting number to 3 and then 4. Then the constructor runs,
  * setting number to 5.
  */
-// This is comment
+// I have removed comment
+
+
 class freakOut{
     public static void main(String[] args) {
         System.out.println("I',m freaking out right now");

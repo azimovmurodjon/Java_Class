@@ -83,14 +83,8 @@ class Egg{
  * in order, setting number to 3 and then 4. Then the constructor runs,
  * setting number to 5.
  */
-// I have removed comment
-// push to github feature_1.0
 
-class freakOut{
-    public static void main(String[] args) {
-        System.out.println("I',m freaking out right now");
-    }
-}
+
 class integerMaxValue{
     public static void main(String[] args) {
         System.out.println(Integer.MAX_VALUE);
@@ -103,6 +97,7 @@ class bugFix{
         System.out.println("Bug fixing");
     }
 }
+
 
 class Numbers{
     public static void main(String[] args) {

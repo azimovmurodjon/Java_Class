@@ -26,7 +26,7 @@ public class Reverse {
    * Java Program to ReverceString using ByteArray
    */
 
-    class ReverseString{
+class ReverseString_using_ByteArray{
         public static void main(String[] args) {
             String input = "GeeksforGeeks";
             //getByte() method to convert String
@@ -41,3 +41,17 @@ public class Reverse {
             }
         }
     }
+    /*
+    * Java Program to ReverseString using StringBuilder
+    */
+class ReverseString_using_StringBuilder{
+    public static void main (String[] args){
+        String input = "Geeks for Geeks";
+        StringBuilder input1 = new StringBuilder();
+        //append a string into StringBuilder input1
+        input1.append(input);
+        // reverse StringBuilder input1
+        input1.reverse();
+        System.out.println(input1);
+         }
+}

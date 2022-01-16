@@ -55,3 +55,19 @@ class ReverseString_using_StringBuilder{
         System.out.println(input1);
          }
 }
+
+    /*
+    * Java Program to Reverse a String by
+    * converting string to characters one bye one
+    */
+class ReverseString_Using_Character_one_by_one{
+        public static void main(String[] args) {
+            String input = "GeeksForGeeks";
+            //convert String to character
+            //by using toCharArray
+            char[] try1 = input.toCharArray();
+            for (int i = try1.length - 1; i >= 0; i--){
+                System.out.print(try1[i]);
+            }
+             }
+    }

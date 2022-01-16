@@ -128,5 +128,4 @@ class understandingVariablesScope{
             lenght = newSize;
         }
     }
-
 }

@@ -1,6 +1,7 @@
 package object.fields.object;
 
 import java.nio.charset.StandardCharsets;
+import java.sql.SQLOutput;
 import java.util.Locale;
 
 /*
@@ -70,4 +71,19 @@ class ReverseString_Using_Character_one_by_one{
                 System.out.print(try1[i]);
             }
              }
+    }
+
+    class string_method_ending_two_character{
+    public String endTwo(String str){
+        return (str.substring(str.length()-2));
+    }
+    public String onlyFirstTwoCharacter(String str){
+        return str.substring(0,2);
+    }
+        public static void main(String[] args) {
+        string_method_ending_two_character str = new string_method_ending_two_character();
+        String hello = "Hello";
+            System.out.println(str.endTwo(hello));
+            System.out.println(str.onlyFirstTwoCharacter(hello));
+        }
     }

@@ -6,7 +6,6 @@ public class constructor {
 
     public constructor(){
         name = "Murodjon";
-
     }
 
 }

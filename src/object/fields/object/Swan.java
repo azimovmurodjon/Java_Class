@@ -105,14 +105,14 @@ class Numbers{
          *
          * Next we have binary, or base 2. The rightmost digit is 1 and is “worth” 1.
          * The second-to- rightmost digit is also 1. In this case, it’s “worth” 2 (1 times 2)
-         * because the base is 2. Add- ing these gets us 3.
+         * because the base is 2. Add-ing these gets us 3.
          *
          * Then comes octal, or base 8. The rightmost digit is 7 and is “worth” 7. The second-to-
          * rightmost digit is 1. In this case, it’s “worth” 8 (1 times 8) because the base is 8.
          * Adding these gets us 15.
          *
          * Finally, we have hexadecimal, or base 16, which is also known as hex. The rightmost
-         * “digit” is F and it’s “worth” 15 (9 is “worth” 9, A is “worth” 10, B is “worth” 11, and so forth).
+         * “digit” is F, and it’s “worth” 15 (9 is “worth” 9, A is “worth” 10, B is “worth” 11, and so forth).
          * The second-to-rightmost digit is 1. In this case, it’s “worth” 16 (1 times 16) because the
          * base is 16. Adding these gets us 31.
          */

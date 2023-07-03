@@ -47,7 +47,7 @@ class ReverseString_using_ByteArray{
     */
 class ReverseString_using_StringBuilder{
     public static void main (String[] args){
-        String input = "Geeks for Geeks";
+        String input = "Greak to ot olleH";
         StringBuilder input1 = new StringBuilder();
         //append a string into StringBuilder input1
         input1.append(input);

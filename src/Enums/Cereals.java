@@ -8,7 +8,8 @@ public enum Cereals {
 
     final int levelOfDeliciousness;
     final double price;
-    Cereals(int levelOfDeliciousness,  double price){
+
+    Cereals(int levelOfDeliciousness, double price) {
         this.levelOfDeliciousness = levelOfDeliciousness;
         this.price = price;
     }

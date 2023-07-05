@@ -6,13 +6,15 @@ import java.sql.SQLOutput;
 
 public class Swan {
     int numEggs; //instance variable
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         Swan mother = new Swan();
         mother.numEggs = 1; //set variable
         System.out.println(mother.numEggs); //read variable
     }
 }
-class Name{
+
+class Name {
     String first = "Murodjon";
     String last = "Azimov";
     String full;
@@ -29,11 +31,14 @@ class Name{
  * whether the braces are inside a method. There’s only one pair of braces
  * outside a method. Line 34 is an instance initializer
  */
-class instanceInitializer{
+class instanceInitializer {
     public static void main(String[] args) {
         System.out.println("Feathers");
     }
-    {System.out.println("Snowy"); }
+
+    {
+        System.out.println("Snowy");
+    }
 }
 
 /**
@@ -42,10 +47,14 @@ class instanceInitializer{
  * Let’s look at an example:
  * Order Of Initializer
  */
-class Chick{
+class Chick {
     private String name = "Fluffy";
-    { System.out.println("Setting Field"); }
-    public Chick(){
+
+    {
+        System.out.println("Setting Field");
+    }
+
+    public Chick() {
         name = "Tiny";
         System.out.println("Setting Constructor");
     }
@@ -55,6 +64,7 @@ class Chick{
         System.out.println(chick.name);
     }
 }
+
 /**
  * Let’s look at what’s happening here. We start with the main() method
  * because that’s where Java starts execution. On line 52, we call the
@@ -66,8 +76,8 @@ class Chick{
  * the constructor is done executing and goes back to the print statement on line 53.
  */
 
-class Egg{
-    public Egg(){
+class Egg {
+    public Egg() {
         number = 5;
     }
 
@@ -75,23 +85,28 @@ class Egg{
         Egg egg = new Egg();
         System.out.println(egg.number);
     }
+
     private int number = 3;
-    {number = 4;}
+
+    {
+        number = 4;
+    }
 }
+
 /**
  * If you answered 5, you got it right. Fields and blocks are run first
  * in order, setting number to 3 and then 4. Then the constructor runs,
  * setting number to 5.
  */
 
-class integerMaxValue{
+class integerMaxValue {
     public static void main(String[] args) {
         System.out.println(Integer.MAX_VALUE);
         System.out.println(Integer.MIN_VALUE);
     }
 }
 
-class Numbers{
+class Numbers {
     public static void main(String[] args) {
         System.out.println(56);     // 56
         System.out.println(0b11);   // 3
@@ -119,9 +134,10 @@ class Numbers{
     }
 }
 
-class understandingVariablesScope{
+class understandingVariablesScope {
     static int MAX_LENGHT = 5;              // MAX_LENGHT --> is Class Variable
     int lenght;                             // lenght --> is Instance Variable
+
     public void grow(int inches) {          // inches and newSize --> is Local Variables
         if (lenght < MAX_LENGHT) {
             int newSize = lenght + inches;

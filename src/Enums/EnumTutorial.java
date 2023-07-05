@@ -29,5 +29,6 @@ class EnumTutorial2 {
         System.out.println("Price " + Cereals.CAPTAIN_CRUNCH.price);
         System.out.println("Level of Deliciousness " + Cereals.COCOA_PUFFS.levelOfDeliciousness);
         System.out.println("Price " + Cereals.COCOA_PUFFS.price);
+
     }
 }

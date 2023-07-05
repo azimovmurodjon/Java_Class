@@ -13,14 +13,14 @@ public class Referance_type {
         System.out.println(isAliOlderThenMax);
 
     }
- 
-    static class Person{
+
+    static class Person {
         String name;
-        Person(String name){
+
+        Person(String name) {
             this.name = name;
         }
     }
-
 
 
 }

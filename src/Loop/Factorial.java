@@ -15,8 +15,7 @@ public class Factorial {
 
         int num = 10;
         long factorial = 1;
-        for(int i = 1; i <= num; ++i)
-        {
+        for (int i = 1; i <= num; ++i) {
             // factorial = factorial * i;
             factorial *= i;
         }
@@ -24,21 +23,35 @@ public class Factorial {
     }
 
 }
+
 /*
 Here, instead of long, we use BigInteger variable factorial.
 Output Factorial of 30 = 265252859812191058636308480000000
 Since, * cannot be used with BigInteger, we instead use multiply() for the product. Also, num should be casted to BigInteger for multiplication.
  */
-class Factorial2{
+class Factorial2 {
     public static void main(String[] args) {
 
         int num = 30;
         BigInteger factorial = BigInteger.ONE;
-        for(int i = 1; i <= num; ++i)
-        {
+        for (int i = 1; i <= num; ++i) {
             // factorial = factorial * i;
             factorial = factorial.multiply(BigInteger.valueOf(i));
         }
         System.out.printf("Factorial of %d = %d", num, factorial);
     }
 }
+
+class Factorial3 {
+    public static void main(String[] args) {
+
+        int num = 5, i = 1;
+        long factorial = 1;
+        while (i <= num) {
+            factorial *= i;
+            i++;
+        }
+        System.out.printf("Factorial of %d = %d", num, factorial);
+    }
+}
+

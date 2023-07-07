@@ -27,4 +27,5 @@ public class Average {
         double average = sum / numArray.length;
         System.out.format("The average is: %.2f", average);
     }
+
 }

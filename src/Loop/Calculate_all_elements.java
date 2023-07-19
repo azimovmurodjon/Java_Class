@@ -1,6 +1,7 @@
 package Loop;
 
-public class Reverse_Number {
+public class Calculate_all_elements {
+
     public static void main(String[] args) {
 
         int num = 1234, reversed = 0;
@@ -21,3 +22,4 @@ public class Reverse_Number {
         System.out.println("Reversed Number: " + reversed);
     }
 }
+

@@ -92,3 +92,39 @@ class REV2
 
     }
 }
+
+class Reverse2
+{
+    int rev[],j=0;
+    Reverse2(int[] a,int n )
+    {
+        rev=new int[n];
+        for(int i=n;i>0 ;i--,j++ )
+        {
+            rev[j] = a[i-1];
+        }
+    }
+}
+class REV3
+{
+    public static void main(String[] args)
+    {
+        int n,i,j=0;
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter number of elements in the array:");
+        n = s.nextInt();
+        int array[] = new int[n];
+        int rev[] = new int[n];
+        System.out.println("Enter "+n+" elements ");
+        for( i=0; i < n; i++)
+        {
+            array[i] = s.nextInt();
+        }
+        Reverse2 res=new Reverse2(array,n);
+        System.out.println("Reverse of an array is :");
+        for( i=0; i < n; i++)
+        {
+            System.out.println(res.rev[i]);
+        }
+    }
+}

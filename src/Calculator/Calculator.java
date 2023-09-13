@@ -15,7 +15,7 @@ class GFG {
     }
 }
 
-class PerimeterOfRhombus
+class PerimeterOfRhombus1
 {
     public static void main(String args[])
     {
@@ -32,7 +32,7 @@ class PerimeterOfRhombus
     }
 }
 
-class PerimeterOfRhombus1
+class PerimeterOfRhombus2
 {
     public static void main(String args[])
     {
@@ -43,4 +43,31 @@ class PerimeterOfRhombus1
 
         System.out.println("perimeter of Rhombus is: " + perimeter);
     }
+}
+
+class PerimeterOfRhombus
+{
+
+    public static void main(String args[])
+    {
+        Scanner s= new Scanner(System.in);
+
+        System.out.println("Enter the side of the Rhombus:");
+
+        double a= s.nextDouble();
+
+        double  perimeter=PerimeterOfRhombus.area(a);
+
+        System.out.println("perimeter of Rhombus is: " + perimeter);
+    }
+    public static double area(double l)
+    {
+
+        double  a=4*l;
+
+        return a;
+    }
+
+
+
 }

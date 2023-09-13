@@ -31,3 +31,16 @@ class PerimeterOfRhombus
         System.out.println("perimeter of Rhombus is: " + perimeter);
     }
 }
+
+class PerimeterOfRhombus1
+{
+    public static void main(String args[])
+    {
+
+        double a= Double.parseDouble(args[0]);
+
+        double  perimeter=4*a;
+
+        System.out.println("perimeter of Rhombus is: " + perimeter);
+    }
+}

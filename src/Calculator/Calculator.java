@@ -92,3 +92,16 @@ class PerimeterOfParallelogram
         System.out.println("perimeter of Parallelogram is: " + perimeter);
     }
 }
+
+class PerimeterOfParallelogram1 {
+    public static void main(String args[]) {
+
+        double h = Double.parseDouble(args[0]);
+
+        double b = Double.parseDouble(args[1]);
+
+        double perimeter = 2 * (h + b);
+
+        System.out.println("perimeter of Parallelogram is: " + perimeter);
+    }
+}

@@ -1,42 +1,68 @@
 package OOP;
+class Address {
+    private String street;
+    private String city;
+    private String state;
+    private String zipCode;
 
-// Define the Person class
-class Person {
-    // Attributes or instance variables
-    private String name;
-    private int age;
-
-    // Constructor to initialize the object
-    public Person(String name, int age) {
-        this.name = name;
-        this.age = age;
+    public Address(String street, String city, String state, String zipCode) {
+        this.street = street;
+        this.city = city;
+        this.state = state;
+        this.zipCode = zipCode;
     }
 
-    // Getter method for the name
+    public String getFullAddress() {
+        return street + ", " + city + ", " + state + " " + zipCode;
+    }
+}
+
+class Person {
+    private String name;
+    private int age;
+    private Address address; // Composition: Person has an Address
+
+    public Person(String name, int age, Address address) {
+        this.name = name;
+        this.age = age;
+        this.address = address;
+    }
+
     public String getName() {
         return name;
     }
 
-    // Getter method for the age
     public int getAge() {
         return age;
     }
 
-    // Setter method for the age
+    public Address getAddress() {
+        return address;
+    }
+
     public void setAge(int age) {
         this.age = age;
     }
 
-    // Method to introduce the person
     public void introduce() {
         System.out.println("Hello, my name is " + name + " and I am " + age + " years old.");
+        System.out.println("My address is: " + address.getFullAddress());
     }
 }
+
 class main {
     public static void main(String[] args) {
-        // Create two Person objects
-        Person person1 = new Person("Alice", 30);
-        Person person2 = new Person("Bob", 25);
+        // Create an Address object
+        Address aliceAddress = new Address("123 Main St", "Springfield", "IL", "12345");
+
+        // Create a Person object with an address
+        Person person1 = new Person("Alice", 30, aliceAddress);
+
+        // Create another Address object
+        Address bobAddress = new Address("456 Elm St", "New York", "NY", "67890");
+
+        // Create another Person object with a different address
+        Person person2 = new Person("Bob", 25, bobAddress);
 
         // Call methods on the objects
         person1.introduce();
@@ -49,4 +75,3 @@ class main {
         System.out.println(person1.getName() + "'s new age is: " + person1.getAge());
     }
 }
-

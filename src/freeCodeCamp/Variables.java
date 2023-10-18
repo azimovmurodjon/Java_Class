@@ -31,6 +31,11 @@ public class Variables {
         System.out.println("The max value for double is " + doubleMaxValue);
         System.out.println("The min value for double is " + doubleMinValue);
 
+        float floatMaxValue = Float.MAX_VALUE;
+        float floatMinValue = Float.MIN_VALUE;
+
+        System.out.println("The max value for float is " + floatMaxValue);
+        System.out.println("The min value for float is " + floatMinValue);
 
     }
 }

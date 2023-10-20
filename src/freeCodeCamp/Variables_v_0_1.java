@@ -39,7 +39,7 @@ class main{
         myNumber %= 4;
         System.out.println(myNumber);
 
-        myNumber = 0;
+        myNumber = 4;
         System.out.println("Postfix Incrementation " + myNumber++);
         System.out.println("Prefix Incrementation "+ ++myNumber);
 

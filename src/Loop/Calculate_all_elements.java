@@ -25,7 +25,7 @@ public class Calculate_all_elements {
     }
 }
 
- Calculator
+// Calculator
 class hash_maps{
     public static void main(String[] args) {
         int a = 10;

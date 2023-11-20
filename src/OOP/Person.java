@@ -75,3 +75,44 @@ class main {
         System.out.println(person1.getName() + "'s new age is: " + person1.getAge());
     }
 }
+
+public class Person1 {
+    private String name;
+    private int age;
+
+    // Constructor
+    public Person1(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Method to introduce the person
+    public void introduce() {
+        System.out.println("Hello, my name is " + name + ", and I am " + age + " years old.");
+    }
+
+    // Method to celebrate a birthday
+    public void haveBirthday() {
+        age++;
+        System.out.println("Happy Birthday! I am now " + age + " years old.");
+    }
+
+    // Main method for example usage
+    public static void main(String[] args) {
+        // Creating instances of the Person class
+        Person1 person1 = new Person1("Alice", 25);
+        Person1 person2 = new Person1("Bob", 30);
+
+        // Introducing themselves
+        person1.introduce();
+        person2.introduce();
+
+        // Having a birthday
+        person1.haveBirthday();
+        person2.haveBirthday();
+
+        // Introducing themselves again after the birthday
+        person1.introduce();
+        person2.introduce();
+    }
+}

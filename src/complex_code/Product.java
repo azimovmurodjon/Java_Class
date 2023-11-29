@@ -1,16 +1,30 @@
 package complex_code;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Scanner;
 
-// Class representing a product
-public class Product {
+import java.util.ArrayList;
+import java.util.List;
+
+/*
+Explanation:
+
+Import Statements: Import necessary classes from the Java standard library.
+
+Product Class: Define a simple Product class with a name and price, along with getter methods.
+
+ShoppingCart Class: Define a ShoppingCart class that uses an ArrayList to store products. It has methods to add products and calculate the total price.
+
+Main Class (ShoppingCartExample): In the main method, create instances of products (laptop, smartphone, headphones) and a shopping cart.
+
+Add Products to Cart: Use the addProduct method to add products to the shopping cart.
+
+Calculate Total: Use the calculateTotal method to calculate and print the total price of items in the cart.
+ */
+
+// Define a class to represent a product
+class Product {
     private String name;
     private double price;
 
-    // Constructor to initialize product with name and price
+    // Constructor to initialize product name and price
     public Product(String name, double price) {
         this.name = name;
         this.price = price;
@@ -25,86 +39,52 @@ public class Product {
     public double getPrice() {
         return price;
     }
+}
 
-    // Override toString method for better printing
-    @Override
-    public String toString() {
-        return "Product{" +
-                "name='" + name + '\'' +
-                ", price=" + price +
-                '}';
+// Define a ShoppingCart class that uses an ArrayList to store products
+class ShoppingCart {
+    private List<Product> cartItems;
+
+    // Constructor to initialize the ArrayList
+    public ShoppingCart() {
+        cartItems = new ArrayList<>();
+    }
+
+    // Method to add a product to the shopping cart
+    public void addProduct(Product product) {
+        cartItems.add(product);
+    }
+
+    // Method to calculate the total price of the items in the cart
+    public double calculateTotal() {
+        double total = 0.0;
+
+        // Loop through each product in the cart and accumulate the total price
+        for (Product product : cartItems) {
+            total += product.getPrice();
+        }
+
+        return total;
     }
 }
 
-// Class representing an inventory management system
-class InventoryManagementSystem {
-    private List<Product> products;             // List to store products
-    private Map<Product, Integer> inventory;    // HashMap to store product quantities
-
-    // Constructor to initialize lists and map
-    public InventoryManagementSystem() {
-        products = new ArrayList<>();
-        inventory = new HashMap<>();
-    }
-
-    // Method to add a product to the inventory with a specified quantity
-    public void addProduct(Product product, int quantity) {
-        products.add(product);
-        inventory.put(product, quantity);
-    }
-
-    // Method to display the current state of the inventory
-    public void displayInventory() {
-        System.out.println("Inventory:");
-        for (Product product : products) {
-            int quantity = inventory.get(product);
-            System.out.println(product + ", Quantity: " + quantity);
-        }
-    }
-
-    // Main method to demonstrate the inventory management system
+ class ShoppingCartExample {
     public static void main(String[] args) {
-        InventoryManagementSystem ims = new InventoryManagementSystem();
+        // Create some product instances
+        Product laptop = new Product("Laptop", 999.99);
+        Product smartphone = new Product("Smartphone", 499.99);
+        Product headphones = new Product("Headphones", 79.99);
 
-        // Adding products to the inventory
-        ims.addProduct(new Product("Laptop", 999.99), 10);
-        ims.addProduct(new Product("Smartphone", 499.99), 20);
-        ims.addProduct(new Product("Headphones", 49.99), 30);
+        // Create a ShoppingCart instance
+        ShoppingCart cart = new ShoppingCart();
 
-        // Displaying the initial inventory
-        ims.displayInventory();
+        // Add products to the shopping cart
+        cart.addProduct(laptop);
+        cart.addProduct(smartphone);
+        cart.addProduct(headphones);
 
-        // Simulating a purchase
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the product name to purchase:");
-        String productName = scanner.nextLine();
-
-        Product selectedProduct = null;
-        for (Product product : ims.products) {
-            if (product.getName().equalsIgnoreCase(productName)) {
-                selectedProduct = product;
-                break;
-            }
-        }
-
-        if (selectedProduct != null) {
-            System.out.println("Enter the quantity to purchase:");
-            int quantityToPurchase = scanner.nextInt();
-
-            int availableQuantity = ims.inventory.get(selectedProduct);
-            if (quantityToPurchase <= availableQuantity) {
-                System.out.println("Purchase successful!");
-                ims.inventory.put(selectedProduct, availableQuantity - quantityToPurchase);
-            } else {
-                System.out.println("Not enough stock available.");
-            }
-        } else {
-            System.out.println("Product not found.");
-        }
-
-        // Displaying the updated inventory
-        ims.displayInventory();
-
-        scanner.close();
+        // Calculate and print the total price of items in the cart
+        double total = cart.calculateTotal();
+        System.out.println("Total Price: $" + total);
     }
 }
